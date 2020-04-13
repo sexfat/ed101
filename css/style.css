@@ -1,42 +1,19 @@
 body {
-  margin: 0;
-  padding: 20px;
-  font-size: 16px;
+  margin: 40px;
+  padding: 0px;
+  font-size: 14px;
   color: #474747;
   background-color: #fff;
 }
 
-.wrapper {
-  color: #474747;
-}
-
-@media all and (max-width: 1366px) {
-  .box {
-    width: 100px;
-  }
-}
-
-@media all and (max-width: 996px) {
-  .box {
-    width: 100px;
-  }
-}
-
-@media all and (max-width: 450px) {
-  .box {
-    width: 100px;
-  }
-}
-
-@media all and (max-width: 450px) {
-  .box2 {
-    width: 400px;
-  }
-}
-
 /* sass */
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .wrapper h1 {
-  font-size: 100px;
+  font-size: 40px;
 }
 
 .wrapper h1 span {
@@ -44,7 +21,8 @@ body {
 }
 
 .wrapper nav {
-  background-color: red;
+  background-color: #c7c7c7;
+  width: 100%;
 }
 
 .wrapper nav ul {

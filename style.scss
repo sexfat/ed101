@@ -1,73 +1,59 @@
-$fontsize : 16px;
-$color : rgb(71, 71, 71);
-$margin : 0;
-$bg-color : (blue : rgb(2, 38, 238),
-    yellow : rgb(255, 230, 0),
-    gray : #eee,
-    white : #fff);
+@import 'base/var';
 
-
-$breakpoint : (desktop : 1366px,
-    medium : 996px,
-    small : 450px);
 
 body {
     margin: $margin;
-    padding: 20px;
+    padding: 0px;
     font-size: $fontsize;
     color: $color;
     background-color: map-get($bg-color, white);
 }
 
-.wrapper {
-    color: $color;
-}
+// @media all and (max-width: map-get($breakpoint, desktop)) {
+//     .box {
+//         width: 100px;
+
+//     }
+// }
 
 
-@media all and (max-width: map-get($breakpoint, desktop)) {
-    .box {
-        width: 100px;
+// @media all and (max-width: map-get($breakpoint, medium)) {
+//     .box {
+//         width: 100px;
 
-    }
-}
-
-
-@media all and (max-width: map-get($breakpoint, medium)) {
-    .box {
-        width: 100px;
-
-    }
-}
+//     }
+// }
 
 
-@media all and (max-width: map-get($breakpoint, small)) {
-    .box {
-        width: 100px;
+// @media all and (max-width: map-get($breakpoint, small)) {
+//     .box {
+//         width: 100px;
 
-    }
-}
+//     }
+// }
 
 
-@media all and (max-width: map-get($breakpoint, small)) {
-    .box2 {
-        width: 400px;
+// @media all and (max-width: map-get($breakpoint, small)) {
+//     .box2 {
+//         width: 400px;
 
-    }
-}
+//     }
+// }
 
 // sass
 /* sass */
 .wrapper {
+    width: 1200px;
+    margin: 0 auto;
     h1 {
-        font-size: 100px;
-
+        font-size: 40px;
         span {
             font-size: 20px;
         }
     }
-
     nav {
-        background-color: rgb(255, 0, 0);
+        background-color: rgb(199, 199, 199);
+        width: 100%;
 
         ul {
             list-style: none;
