@@ -1,13 +1,13 @@
 body {
-  margin: 10px 20px 30px 40px;
-  padding: 10px;
-  font-size: 100px;
-  color: red;
-  background-color: #eee;
+  margin: 0;
+  padding: 20px;
+  font-size: 16px;
+  color: #474747;
+  background-color: #fff;
 }
 
 .wrapper {
-  color: red;
+  color: #474747;
 }
 
 @media all and (max-width: 1366px) {
@@ -32,5 +32,29 @@ body {
   .box2 {
     width: 400px;
   }
+}
+
+/* sass */
+.wrapper h1 {
+  font-size: 100px;
+}
+
+.wrapper h1 span {
+  font-size: 20px;
+}
+
+.wrapper nav {
+  background-color: red;
+}
+
+.wrapper nav ul {
+  list-style: none;
+}
+
+.wrapper nav ul li {
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+  background-color: #ffe600;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,21 +1,22 @@
-$fontsize : 100px;
-$color : rgb(255, 0, 0);
-$margin : 10px 20px 30px 40px;
+$fontsize : 16px;
+$color : rgb(71, 71, 71);
+$margin : 0;
 $bg-color : (blue : rgb(2, 38, 238),
     yellow : rgb(255, 230, 0),
-    gray : #eee);
+    gray : #eee,
+    white : #fff);
 
-$breakpoint : (
-    desktop : 1366px,
+
+$breakpoint : (desktop : 1366px,
     medium : 996px,
     small : 450px);
 
 body {
     margin: $margin;
-    padding: 10px;
+    padding: 20px;
     font-size: $fontsize;
     color: $color;
-    background-color: map-get($bg-color, gray);
+    background-color: map-get($bg-color, white);
 }
 
 .wrapper {
@@ -51,5 +52,32 @@ body {
     .box2 {
         width: 400px;
 
+    }
+}
+
+// sass
+/* sass */
+.wrapper {
+    h1 {
+        font-size: 100px;
+
+        span {
+            font-size: 20px;
+        }
+    }
+
+    nav {
+        background-color: rgb(255, 0, 0);
+
+        ul {
+            list-style: none;
+
+            li {
+                width: 100px;
+                height: 30px;
+                display: inline-block;
+                background-color:  map-get($bg-color , yellow);
+            }
+        }
     }
 }
