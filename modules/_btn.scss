@@ -1,0 +1,12 @@
+@mixin btn($w ,$bgc , $color) {
+    padding:$w;
+    text-align: center;
+    background-color: $bgc;
+    color:$color;
+    border : 1px solid $color;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($bgc,7);
+    }
+}
