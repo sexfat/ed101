@@ -1,0 +1,34 @@
+body {
+  margin: 10px 20px 30px 40px;
+  padding: 10px;
+  font-size: 100px;
+  color: red;
+  background-color: #eee;
+}
+
+.wrapper {
+  color: red;
+}
+
+@media all and (max-width: 1366px) {
+  .box {
+    width: 100px;
+  }
+}
+@media all and (max-width: 996px) {
+  .box {
+    width: 100px;
+  }
+}
+@media all and (max-width: 450px) {
+  .box {
+    width: 100px;
+  }
+}
+@media all and (max-width: 450px) {
+  .box2 {
+    width: 400px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

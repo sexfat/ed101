@@ -1,0 +1,55 @@
+$fontsize : 100px;
+$color : rgb(255, 0, 0);
+$margin : 10px 20px 30px 40px;
+$bg-color : (blue : rgb(2, 38, 238),
+    yellow : rgb(255, 230, 0),
+    gray : #eee);
+
+$breakpoint : (
+    desktop : 1366px,
+    medium : 996px,
+    small : 450px);
+
+body {
+    margin: $margin;
+    padding: 10px;
+    font-size: $fontsize;
+    color: $color;
+    background-color: map-get($bg-color, gray);
+}
+
+.wrapper {
+    color: $color;
+}
+
+
+@media all and (max-width: map-get($breakpoint, desktop)) {
+    .box {
+        width: 100px;
+
+    }
+}
+
+
+@media all and (max-width: map-get($breakpoint, medium)) {
+    .box {
+        width: 100px;
+
+    }
+}
+
+
+@media all and (max-width: map-get($breakpoint, small)) {
+    .box {
+        width: 100px;
+
+    }
+}
+
+
+@media all and (max-width: map-get($breakpoint, small)) {
+    .box2 {
+        width: 400px;
+
+    }
+}
