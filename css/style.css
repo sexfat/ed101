@@ -1,5 +1,5 @@
 body {
-  margin: 40px;
+  margin: 0;
   padding: 0px;
   font-size: 14px;
   color: #474747;
@@ -8,8 +8,9 @@ body {
 
 /* sass */
 .wrapper {
-  width: 1200px;
   margin: 0 auto;
+  width: 1200px;
+  background-color: #fff;
 }
 
 .wrapper h1 {
@@ -34,5 +35,29 @@ body {
   height: 30px;
   display: inline-block;
   background-color: #ffe600;
+}
+
+.wrapper nav ul li:hover {
+  background-color: #998a00;
+  cursor: pointer;
+}
+
+.wrapper .section .left {
+  float: left;
+  width: 49.5%;
+  height: 400px;
+  background-color: #d5d5d5;
+}
+
+.wrapper .section .right {
+  float: right;
+  width: 49.5%;
+  height: 400px;
+  background-color: #d5d5d5;
+}
+
+.wrapper .section::before {
+  content: '';
+  clear: both;
 }
 /*# sourceMappingURL=style.css.map */

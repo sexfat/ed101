@@ -1,5 +1,13 @@
 @import 'base/var';
 
+@mixin margin_auto($width , $bgc:null){
+    margin: 0 auto;
+    width: $width;
+    background-color: $bgc;
+   
+  }
+
+
 
 body {
     margin: $margin;
@@ -43,14 +51,16 @@ body {
 // sass
 /* sass */
 .wrapper {
-    width: 1200px;
-    margin: 0 auto;
+    @include margin_auto(1200px, #fff);
+ 
     h1 {
         font-size: 40px;
+
         span {
             font-size: 20px;
         }
     }
+
     nav {
         background-color: rgb(199, 199, 199);
         width: 100%;
@@ -62,8 +72,49 @@ body {
                 width: 100px;
                 height: 30px;
                 display: inline-block;
-                background-color:  map-get($bg-color , yellow);
+                background-color: map-get($bg-color, yellow);
+
+                &:hover {
+                    background-color: darken(map-get($bg-color, yellow) , 20);
+                    cursor: pointer;
+                }
             }
         }
     }
+
+    .section {
+        .left {
+            float: left;
+            width: 49.5%;
+            height: 400px;
+            background-color: rgb(213, 213, 213);
+        }
+
+        .right {
+            float: right;
+            width: 49.5%;
+            height: 400px;
+            background-color: rgb(213, 213, 213);
+        }
+
+        &::before {
+            content: '';
+            clear: both;
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
