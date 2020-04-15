@@ -15,6 +15,9 @@
   .w80 {
       width: 80px;
   }
+
+
+ 
 body {
     margin: $margin;
     padding: 0px;
@@ -66,7 +69,9 @@ body {
             font-size: 20px;
         }
     }
-
+    %border-outline {
+        border:1px solid #000;
+    }
     nav {
         background-color: rgb(199, 199, 199);
         width: 100%;
@@ -78,6 +83,7 @@ body {
                 height: 30px;
                 display: inline-block;
                 background-color: $btn-color;
+                @extend %border-outline;
 
                 &:hover {
                     background-color: darken($btn-color  , 10);
@@ -99,10 +105,15 @@ body {
             .btn2 {
                 @include btn(8px,rgb(255, 51, 0) , rgb(234, 0, 255) )
             }
-            @include btncom('.btn-com' , rgba(255, 34, 0, 0) ,rgb(207, 169, 43)){
-                 color: rgb(207, 169, 43);
-
+            @include btncom('.btns' , 100px, rgb(0, 25, 250));
+            @include btncom('#btn-wide' , 120px, rgb(216, 79, 0) ,'big');
+            @include btncom('#btn-small' , 80px, rgb(102, 190, 0) ,'small'){
+                margin-top: 10px;
+                box-shadow: 1px 1px 10px rgb(29, 145, 0);
             }
+           
+
+           
         }
 
         .right {
@@ -118,6 +129,27 @@ body {
         }
     }
 }
+
+
+$a : 100;
+$b: 200;
+
+.box-plus {
+  width: $b + $a + px;
+  height: $b - $a + px;
+  margin: 10 * (20 + 20px);
+  font-size: (20px / 2);
+}
+
+
+.width {
+    font-size: ceil(13.1px); //無條件進位
+    font-size: floor(13.5px);// 捨去
+    font-size: round(13.2px);// 四捨五入
+}
+
+
+
 
 
 
