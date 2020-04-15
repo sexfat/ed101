@@ -1,4 +1,5 @@
 @import 'base/var';
+@import 'base/reset';
 @import 'modules/btn';
 
 @mixin margin_auto($width, $bgc:null) {
@@ -156,7 +157,7 @@ $b: 200;
 
 
 @mixin border( $dir , $bordercolor){
-   border-#{$dir} :  1px solid $bordercolor 
+   border-#{$dir} :  1px solid $bordercolor;
 } 
 
 
@@ -200,3 +201,11 @@ $b: 200;
 
 
 @include htitle($fontsize);
+
+
+
+@for $i from 1 through 20 {
+    .col-#{$i} {
+       width:  $i * 1px; 
+    } 
+}
