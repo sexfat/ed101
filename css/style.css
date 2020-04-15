@@ -9,7 +9,7 @@
 body {
   margin: 0;
   padding: 0px;
-  font-size: 14px;
+  font-size: 15px;
   color: #474747;
   background-color: #fff;
 }
@@ -19,10 +19,6 @@ body {
   margin: 0 auto;
   width: 1200px;
   background-color: #fff;
-}
-
-.wrapper h1 {
-  font-size: 40px;
 }
 
 .wrapper h1 span {
@@ -156,5 +152,32 @@ body {
   font-size: 14px;
   font-size: 13px;
   font-size: 13px;
+}
+
+h1, h2 {
+  border-top: 1px solid #000;
+}
+
+h1 {
+  font-size: 75px;
+}
+
+h2 {
+  font-size: 69px;
+}
+
+h3 {
+  font-size: 53px;
+  border-top: 1px solid #000;
+}
+
+h4 {
+  font-size: 39px;
+  border-top: 1px solid #000;
+}
+
+h5 {
+  font-size: 18px;
+  border-top: 1px solid #000;
 }
 /*# sourceMappingURL=style.css.map */
