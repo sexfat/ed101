@@ -241,5 +241,48 @@ $b: 200;
 }
 
 
-@include push('left',300);
-@include push('top',300);
+// @include push('left',300);
+// @include push('top',300);
+
+
+
+// $list : a1 a2 a3 a4 a5 b1 b2 b3;
+
+
+@mixin imgUrl($list , $style:jpg) {
+    @each $imgUrl in $list {
+        @if $style=='jpg' {
+            .img-#{$imgUrl} {
+                background-image: url('img/#{$imgUrl}.jpg');
+            }
+        }
+
+        @else {
+            .img-#{$imgUrl} {
+                background-image: url('img/#{$imgUrl}.#{$style}');
+            }
+        }
+
+    }
+}
+
+
+    @include imgUrl(a1 a2 a3 ,png );
+    @include imgUrl(a12 a22 a32);
+
+
+    $list : (
+        h1 : 40px,
+        h2 : 30px,
+        h3 : 20px,
+        h4: 15px,
+        span :  30px,
+        '.box' :  30px
+        );
+
+
+    @each $key,$val in $list {
+        #{$key} {
+            font-size: $val;
+        }
+    }
