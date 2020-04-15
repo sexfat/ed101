@@ -156,46 +156,47 @@ $b: 200;
 }
 
 
-@mixin border( $dir , $bordercolor){
-   border-#{$dir} :  1px solid $bordercolor;
-} 
+@mixin border($dir, $bordercolor) {
+    border-#{$dir}: 1px solid $bordercolor;
+}
 
 
 @mixin htitle ($fontsizes) {
     %borderbottom {
         border-top: 1px solid #000;
-    } 
+    }
+
     h1 {
         font-size: round($fontsizes * 5);
         @extend %borderbottom;
         // @include border (top , #000);
-        
+
     }
 
     h2 {
         font-size: round($fontsizes * 4.6);
         @extend %borderbottom;
         // @include border (top , #000);
-       
-       
+
+
     }
 
     h3 {
         font-size: round($fontsizes * 3.5);
-        @include border (top , #000);
-       
+        @include border (top, #000);
+
     }
 
     h4 {
         font-size: round($fontsizes * 2.6);
-        @include border (top , #000);
-       
+        @include border (top, #000);
+
     }
 
     h5 {
         font-size: round($fontsizes * 1.2);
-        @include border (top , #000);
-       
+        @include border (top, #000);
+
     }
 }
 
@@ -204,8 +205,41 @@ $b: 200;
 
 
 
-@for $i from 1 through 20 {
-    .col-#{$i} {
-       width:  $i * 1px; 
-    } 
+// @for $i from 1 through 20 {
+//     .col-#{$i} {
+//         width: $i * 1px;
+//     }
+// }
+
+@mixin grid($num) {
+    @for $i from 1 through $num {
+        .col-md-#{$i} {
+            width: ($i / $num) *100%;
+            background-color: rgb(245, 38, 38);
+        }
+    }
 }
+
+@include grid(12);
+
+
+.boxs {
+    width: 100px;
+    height: 20px;
+    background-color: rgb(241, 0, 0);
+}
+
+
+@mixin push($dir, $num) {
+    @for $i from 1 through $num {
+        .margin#{$dir}#{$i} {
+            // margin-left: $i * 1px;
+            position: relative;
+            #{$dir}: $i * 1px;
+        }
+    }
+}
+
+
+@include push('left',300);
+@include push('top',300);
