@@ -1,6 +1,10 @@
 @import 'base/var';
 @import 'base/reset';
 @import 'modules/btn';
+/*bootstrap start */
+// @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+/*bootstrap end */
 
 @mixin margin_auto($width, $bgc:null) {
     margin: 0 auto;
@@ -276,6 +280,7 @@ $b: 200;
         h2 : 30px,
         h3 : 20px,
         h4: 15px,
+        h5 : 10px,
         span :  30px,
         '.box' :  30px
         );
@@ -286,3 +291,17 @@ $b: 200;
             font-size: $val;
         }
     }
+
+
+ .aboutus_wrapper {
+    width: 100%; 
+    .box {
+       width: 200px;
+    }
+  } 
+ .contactus_wrapper {
+    width: 1200px; 
+     .box {
+       width: 100px;
+     }
+ }  

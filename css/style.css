@@ -48,6 +48,8 @@ table {
   border-spacing: 0;
 }
 
+/*bootstrap start */
+/*bootstrap end */
 .w100 {
   width: 150px;
 }
@@ -337,11 +339,31 @@ h4 {
   font-size: 15px;
 }
 
+h5 {
+  font-size: 10px;
+}
+
 span {
   font-size: 30px;
 }
 
 .box {
   font-size: 30px;
+}
+
+.aboutus_wrapper {
+  width: 100%;
+}
+
+.aboutus_wrapper .box {
+  width: 200px;
+}
+
+.contactus_wrapper {
+  width: 1200px;
+}
+
+.contactus_wrapper .box {
+  width: 100px;
 }
 /*# sourceMappingURL=style.css.map */
