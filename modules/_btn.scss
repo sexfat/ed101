@@ -1,12 +1,32 @@
-@mixin btn($w ,$bgc , $color) {
-    padding:$w;
-    text-align: center;
+@mixin btn($w, $bgc, $color) {
+  padding: $w;
+  text-align: center;
+  background-color: $bgc;
+  color: $color;
+  border: 1px solid $color;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($bgc, 7);
+  }
+}
+
+
+
+@mixin btncom($class , $bgc , $border-color:none) {
+  #{$class} {
+    max-width: 120px;
+    padding: 8px 13px;
     background-color: $bgc;
-    color:$color;
-    border : 1px solid $color;
+    text-align: center;
     border-radius: 5px;
+    color: #fff;
     cursor: pointer;
+    border: 1px solid $border-color;
     &:hover {
-      background-color: darken($bgc,7);
+      background-color: lighten($bgc, 10);
     }
+    @content
+  }
 }

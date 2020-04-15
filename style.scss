@@ -73,7 +73,6 @@ body {
 
         ul {
             list-style: none;
-
             li {
                 width: 100px;
                 height: 30px;
@@ -99,6 +98,10 @@ body {
             }
             .btn2 {
                 @include btn(8px,rgb(255, 51, 0) , rgb(234, 0, 255) )
+            }
+            @include btncom('.btn-com' , rgba(255, 34, 0, 0) ,rgb(207, 169, 43)){
+                 color: rgb(207, 169, 43);
+
             }
         }
 
