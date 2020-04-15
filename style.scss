@@ -8,9 +8,6 @@
    
   }
 
-
-
-
   .w100 {
      width: 150px;  
   }
@@ -81,10 +78,10 @@ body {
                 width: 100px;
                 height: 30px;
                 display: inline-block;
-                background-color: map-get($bg-color, yellow);
+                background-color: $btn-color;
 
                 &:hover {
-                    background-color: darken(map-get($bg-color, yellow) , 20);
+                    background-color: darken($btn-color  , 10);
                     cursor: pointer;
                 }
             }

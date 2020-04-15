@@ -42,11 +42,11 @@ body {
   width: 100px;
   height: 30px;
   display: inline-block;
-  background-color: #ffe600;
+  background-color: #15fc00;
 }
 
 .wrapper nav ul li:hover {
-  background-color: #998a00;
+  background-color: #11c900;
   cursor: pointer;
 }
 
