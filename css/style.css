@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,6 +60,37 @@ table {
 
 .login:hover {
   box-shadow: 1px 2px 50px black;
+}
+
+.login::after {
+  content: '1200 以上';
+}
+
+@media all and (max-width: 1200px) {
+  .login {
+    background-color: #f82525;
+  }
+  .login::after {
+    content: '1200';
+  }
+}
+
+@media all and (max-width: 996px) {
+  .login {
+    background-color: #d6da00;
+  }
+  .login::after {
+    content: '平板';
+  }
+}
+
+@media all and (max-width: 720px) {
+  .login {
+    background-color: #006eff;
+  }
+  .login::after {
+    content: '手機';
+  }
 }
 
 /*bootstrap start */

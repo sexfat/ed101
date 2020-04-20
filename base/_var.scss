@@ -7,10 +7,16 @@ $bg-color : (blue : rgb(2, 38, 238),
     gray : #eee,
     white : #fff);
 
+$large : 1200px;
+$medium : 996px;
+$small : 720px;
 
-$breakpoint : (desktop : 1366px,
-    medium : 996px,
-    small : 450px);
+
+
+
+// $breakpoint : (desktop : 1366px,
+//     medium : 996px,
+//     small : 450px);
 
 
 $btn-color : rgb(21, 252, 0);
@@ -18,3 +24,5 @@ $btn-color : rgb(21, 252, 0);
 
 $brand-primary:         darken(#e98400, 6.5%); // #337ab7
 $gray-base:              #333;
+
+

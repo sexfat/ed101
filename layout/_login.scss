@@ -1,8 +1,48 @@
 .login {
-  @include rect(30% , 500px);
+  @include rect(30%, 500px);
   background-color: rgb(177, 177, 177);
-  @include border(top , rgb(92, 92, 92));
+  @include border(top, rgb(92, 92, 92));
   @include marginauto();
-  @include box-shadow(1px , 2px , 10px ,#000);
-  // box-shadow: 1px 2px 10px #000 ;
+  @include box-shadow(1px, 2px, 10px, #000);
+
+  &::after {
+    content: '1200 以上';
+  }
+}
+
+@include rwd(large) {
+
+  .login {
+    background-color: rgb(248, 37, 37);
+
+    &::after {
+      content: '1200';
+    }
+  }
+}
+
+
+
+@include rwd(medium) {
+
+  .login {
+    background-color: rgb(214, 218, 0);
+    &::after {
+      content: '平板';
+    }
+  }
+}
+
+
+@include rwd(small) {
+
+  .login {
+
+    background-color: rgb(0, 110, 255);
+
+    &::after {
+      content: '手機';
+    }
+
+  }
 }
