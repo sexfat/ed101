@@ -1,0 +1,38 @@
+@mixin btn($w, $bgc, $color) {
+    padding: $w;
+    text-align: center;
+    background-color: $bgc;
+    color: $color;
+    border: 1px solid $color;
+    border-radius: 5px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: darken($bgc, 7);
+    }
+  }
+  
+  
+  
+  @mixin btncom($class ,$maxWidth  , $bgc , $style:middle) {
+    #{$class} {
+      max-width: $maxWidth;
+      //判斷大小
+      @if $style == 'big' {
+      padding: 12px 18px;
+      }@else if $style == 'middle' {
+        padding :8px 13px;  
+      }@else if $style == 'small' {
+        padding :4px 10px;  
+      }
+      background-color: $bgc;
+      text-align: center;
+      border-radius: 10px;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        background-color: lighten($bgc, 10);
+      }
+      @content
+    }
+  }

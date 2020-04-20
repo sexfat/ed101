@@ -1,3 +1,7 @@
+//@include border(top , #000)
+//
+
+
 @mixin border($dir, $bordercolor) {
     border-#{$dir}: 1px solid $bordercolor;
 }

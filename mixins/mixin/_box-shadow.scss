@@ -1,0 +1,6 @@
+@mixin box-shadow($value_x, $value_y, $value_blur, $color) {
+    box-shadow: $value_x $value_y $value_blur $color;
+    &:hover {
+        box-shadow :$value_x   $value_y $value_blur * 5  darken($color , 10);
+    }
+ }

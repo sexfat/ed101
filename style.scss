@@ -1,9 +1,13 @@
 @import 'base/var';
 @import 'base/reset';
 @import 'mixins/mixin';
+@import 'components/btn';
+@import 'layout/login';
+
+
+
 /*bootstrap start */
 // @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
-
 /*bootstrap end */
 
 
@@ -265,9 +269,6 @@ $b: 200;
 
 
  // box-shadow
- @mixin box-shadow($value_x, $value_y, $value_blur, $color) {
-    box-shadow: $value_x $value_y $value_blur $color;
- }
 
 
 
