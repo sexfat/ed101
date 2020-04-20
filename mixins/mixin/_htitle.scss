@@ -1,0 +1,38 @@
+@mixin htitle ($fontsizes) {
+    %borderbottom {
+        border-top: 1px solid #000;
+    }
+
+    h1 {
+        font-size: round($fontsizes * 5);
+        @extend %borderbottom;
+        // @include border (top , #000);
+
+    }
+
+    h2 {
+        font-size: round($fontsizes * 4.6);
+        @extend %borderbottom;
+        // @include border (top , #000);
+
+
+    }
+
+    h3 {
+        font-size: round($fontsizes * 3.5);
+        @include border (top, #000);
+
+    }
+
+    h4 {
+        font-size: round($fontsizes * 2.6);
+        @include border (top, #000);
+
+    }
+
+    h5 {
+        font-size: round($fontsizes * 1.2);
+        @include border (top, #000);
+
+    }
+}

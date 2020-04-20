@@ -1,17 +1,12 @@
 @import 'base/var';
 @import 'base/reset';
-@import 'modules/btn';
+@import 'mixins/mixin'
 /*bootstrap start */
 // @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 /*bootstrap end */
 
-@mixin margin_auto($width, $bgc:null) {
-    margin: 0 auto;
-    width: $width;
-    background-color: $bgc;
 
-}
 
 .w100 {
     width: 150px;
@@ -160,49 +155,10 @@ $b: 200;
 }
 
 
-@mixin border($dir, $bordercolor) {
-    border-#{$dir}: 1px solid $bordercolor;
-}
 
 
-@mixin htitle ($fontsizes) {
-    %borderbottom {
-        border-top: 1px solid #000;
-    }
-
-    h1 {
-        font-size: round($fontsizes * 5);
-        @extend %borderbottom;
-        // @include border (top , #000);
-
-    }
-
-    h2 {
-        font-size: round($fontsizes * 4.6);
-        @extend %borderbottom;
-        // @include border (top , #000);
 
 
-    }
-
-    h3 {
-        font-size: round($fontsizes * 3.5);
-        @include border (top, #000);
-
-    }
-
-    h4 {
-        font-size: round($fontsizes * 2.6);
-        @include border (top, #000);
-
-    }
-
-    h5 {
-        font-size: round($fontsizes * 1.2);
-        @include border (top, #000);
-
-    }
-}
 
 
 @include htitle($fontsize);
@@ -276,7 +232,7 @@ $b: 200;
 
 
     $list : (
-        h1 : 40px,
+        h1 : 60px,
         h2 : 30px,
         h3 : 20px,
         h4: 15px,
@@ -305,3 +261,54 @@ $b: 200;
        width: 100px;
      }
  }  
+ @mixin box-shadow($value_x, $value_y, $value_blur, $color) {
+    box-shadow: $value_x $value_y $value_blur $color;
+ }
+
+
+
+
+
+ @mixin hover_shadow($value_x, $value_y, $value_blur, $color) {
+    transition: all .3s ease;
+    &:hover {
+        @include box-shadow($value_x, $value_y, $value_blur, $color);
+    }
+}
+
+
+
+
+ @mixin color_lighten($color,
+ $amount) {
+ @for $i from 1 through $amount {
+     .color_lighten_#{$i} {
+         background-color: lighten($color, $i*3);
+         height: 50px;
+         width: 300px;
+         @include hover_shadow(3px , 4px , 10px, rgb(153, 0, 0));
+     }
+ }
+}
+
+
+
+@mixin color_darken($color,
+    $amount) {
+    @for $i from 1 through $amount {
+        .color_darken_#{$i} {
+            background-color: darken($color, $i*3);
+            height: 50px;
+            width: 300px;
+            @include hover_shadow(1px , 2px , 10px, rgb(150, 150, 150));
+        }
+    }
+}
+
+
+
+
+
+
+@include color_lighten(rgb(67, 126, 0), 10);
+@include color_darken(rgb(179, 57, 0), 10);

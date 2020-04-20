@@ -1,0 +1,3 @@
+@mixin border($dir, $bordercolor) {
+    border-#{$dir}: 1px solid $bordercolor;
+}

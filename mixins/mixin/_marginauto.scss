@@ -1,0 +1,5 @@
+@mixin margin_auto($width, $bgc:null) {
+    margin: 0 auto;
+    width: $width;
+    background-color: $bgc;
+}
