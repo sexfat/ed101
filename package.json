@@ -8,7 +8,8 @@
     "d3": "^5.15.1",
     "fullpage": "^1.5.1",
     "gsap": "^2.1.2",
-    "jquery": "^3.5.0"
+    "jquery": "^3.5.0",
+    "php": "0.0.1"
   },
   "devDependencies": {},
   "scripts": {

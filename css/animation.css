@@ -1,1 +1,13 @@
-/* No CSS *//*# sourceMappingURL=animation.css.map */
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #46f800;
+}
+/*# sourceMappingURL=animation.css.map */
