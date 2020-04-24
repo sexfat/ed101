@@ -9,7 +9,7 @@
     content: '1200 以上';
   }
 }
-
+ // 桌機
 @include rwd(large) {
 
   .login {
@@ -22,7 +22,7 @@
 }
 
 
-
+//平板
 @include rwd(medium) {
 
   .login {
@@ -33,7 +33,7 @@
   }
 }
 
-
+//手機
 @include rwd(small) {
 
   .login {
