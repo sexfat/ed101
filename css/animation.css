@@ -5,9 +5,11 @@ body {
 }
 
 .box {
-  width: 150px;
-  height: 40px;
-  margin-top: 10px;
+  width: 160px;
+  height: 80px;
+  margin-top: 60px;
+  position: relative;
+  left: 45%;
   background-color: #46f800;
 }
 /*# sourceMappingURL=animation.css.map */
