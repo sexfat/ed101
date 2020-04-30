@@ -33,9 +33,9 @@ TweenMax.from('.box_from', 2, {
     x: 300
 });
 TweenMax.fromTo('.box_fromTo', 1, {
-    x: 100//a
+    x: 100 //a
 }, {
-    x: 500//b
+    x: 500 //b
 })
 
 
@@ -47,20 +47,20 @@ TweenMax.fromTo('.box_fromTo', 1, {
 function animation() {
     var tlmax = new TimelineMax({
         //    repeat: -1,
-           yoyo: true
-        
-        });
-        
-        tlmax.to('.box_a', 2, {
-            x: 300
-        }).to('.box_a', 2, {
-            y: 300
-        }).to('.box_a', 2, {
-            x: 400
-        }).to('.box_a' , 1, {
-           rotation: 360
-        })
-    
+        yoyo: true
+
+    });
+
+    tlmax.to('.box_a', 2, {
+        x: 300
+    }).to('.box_a', 2, {
+        y: 300
+    }).to('.box_a', 2, {
+        x: 400
+    }).to('.box_a', 1, {
+        rotation: 360
+    })
+
 }
 
 animation();
@@ -79,9 +79,3 @@ animation();
 //     y: 300,
 //     x: 400
 // });
-
-
-
-
-
-
