@@ -22,4 +22,13 @@ section {
 .bg3 {
   background-color: #e9e9e9;
 }
+
+.bg4 {
+  transition: all 1s ease-in-out;
+  background-color: #1f1f1f;
+}
+
+.bg4.on {
+  background-color: #ff0707;
+}
 /*# sourceMappingURL=animation.css.map */

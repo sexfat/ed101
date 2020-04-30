@@ -119,10 +119,13 @@ new ScrollMagic.Scene({
     offset: 0,
     // triggerHook: .3,
     // duration: 400,
-    reverse: false,
-}).setTween(tweenline).addIndicators({
+    reverse: true,
+}).setClassToggle('.bg4','on').setTween(tweenline).addIndicators({
     name: 'keypoint02'
 }).addTo(controller);
+//.setClassToggle('.bg4','on') 選擇到.bg4 物件 然後動態加入on
+
+
 
 
 

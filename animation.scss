@@ -24,3 +24,11 @@ section {
 .bg3 {
    background-color: rgb(233, 233, 233);
 }
+
+.bg4 {
+  transition:all 1s ease-in-out;
+  background-color: rgb(31, 31, 31);
+   &.on{
+      background-color: rgb(255, 7, 7);
+   }
+}
