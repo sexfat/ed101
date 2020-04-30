@@ -128,9 +128,6 @@ new ScrollMagic.Scene({
 
 // 固定住場景
 var tlstick = new TimelineMax();
-
-
-
 //動畫執行
 tlstick.fromTo('.text1', 1, {
     x: -100,
@@ -138,22 +135,22 @@ tlstick.fromTo('.text1', 1, {
 }, {
     x: 0,
     opacity: 1
-}).fromTo('.text2', 1 , {
+}).fromTo('.text2', 1, {
     x: -100,
     opacity: 0
-},{
+}, {
     x: 0,
     opacity: 1
-}).fromTo('.text3', 1 , {
+}).fromTo('.text3', 1, {
     x: -100,
     opacity: 0
-},{
+}, {
     x: 0,
     opacity: 1
-}).fromTo('.text4', 1 , {
+}).fromTo('.text4', 1, {
     y: -100,
     opacity: 0
-},{
+}, {
     y: 0,
     opacity: 1
 })
@@ -167,3 +164,39 @@ new ScrollMagic.Scene({
 }).setPin('.bg5').setTween(tlstick).addIndicators({
     name: 'keypoint03'
 }).addTo(controller);
+
+
+
+//固定場景
+
+var wipeAnimation = new TimelineMax();
+wipeAnimation.fromTo(".panel.yellow", 1, {
+        x: "-100%"
+    }, {
+        x: "0%",
+        ease: Linear.easeNone
+    }) // in from left
+    .fromTo(".panel.green", 1, {
+        x: "100%"
+    }, {
+        x: "0%",
+        ease: Linear.easeNone
+    }) // in from right
+    .fromTo(".panel.red", 1, {
+        y: "-100%"
+    }, {
+        y: "0%",
+        ease: Linear.easeNone
+    }); // in from top
+
+
+//觸發事件
+    new ScrollMagic.Scene({
+        triggerElement: '#keypoint4',
+        offset: 0,
+        triggerHook: 0,
+        duration: '300%',
+    
+    }).setPin('.bg6').setTween(wipeAnimation).addIndicators({
+        name: 'keypoint04'
+    }).addTo(controller);

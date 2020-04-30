@@ -47,4 +47,22 @@ section {
   font-size: 20px;
   margin-bottom: 20px;
 }
+
+.bg6 .panel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.bg6 .panel.blue {
+  background-color: blue;
+}
+
+.bg6 .panel.yellow {
+  background-color: yellow;
+}
+
+.bg6 .panel.green {
+  background-color: green;
+}
 /*# sourceMappingURL=animation.css.map */
