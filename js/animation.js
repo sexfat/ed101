@@ -200,3 +200,46 @@ wipeAnimation.fromTo(".panel.yellow", 1, {
     }).setPin('.bg6').setTween(wipeAnimation).addIndicators({
         name: 'keypoint04'
     }).addTo(controller);
+
+
+//滾動式差
+
+var parallaxs = new TimelineMax();
+
+
+var parallax_01 = TweenMax.to('.boxpallax1'  ,1 , {
+    y: '-10%'
+})
+
+var parallax_02 = TweenMax.to('.boxpallax2'  ,1 , {
+    y: '50%'
+})
+
+var parallax_03 = TweenMax.to('.boxpallax3'  ,1 , {
+    y: '-120%'
+})
+
+
+parallaxs.add([parallax_01 , parallax_02 , parallax_03]);
+
+
+
+//scoll 觸發事件
+new ScrollMagic.Scene({
+    triggerElement: '#keypoint5',
+    duration: '100%'
+}).setTween(parallaxs).addIndicators({
+    name: 'keypoint05'
+}).addTo(controller);
+
+
+
+
+
+
+
+
+
+
+
+

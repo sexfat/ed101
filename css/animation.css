@@ -65,4 +65,33 @@ section {
 .bg6 .panel.green {
   background-color: green;
 }
+
+.bg7 {
+  background-color: #cca4ff;
+  background-image: url(https://placem.at/people);
+  background-size: cover;
+}
+
+.bg7 .box {
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.bg7 .boxpallax1 {
+  position: relative;
+  top: 300px;
+  left: 600px;
+}
+
+.bg7 .boxpallax2 {
+  position: relative;
+  top: 300px;
+  left: 700px;
+}
+
+.bg7 .boxpallax3 {
+  position: relative;
+  top: 200px;
+  left: 800px;
+}
 /*# sourceMappingURL=animation.css.map */
