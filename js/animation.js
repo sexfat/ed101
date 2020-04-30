@@ -1,5 +1,7 @@
 console.log('start');
 
+var controller = new ScrollMagic.Controller();
+
 
 
 TweenMax.to('.box_basic', 3, {
@@ -79,3 +81,19 @@ animation();
 //     y: 300,
 //     x: 400
 // });
+
+
+
+
+var tweenscroll = TweenMax.to('.box_scroll' , 1, {
+    x: 400
+});
+
+
+
+new ScrollMagic.Scene({
+    triggerElement: '#keypoint1'
+}).setTween(tweenscroll).addIndicators().addTo(controller);
+
+
+
