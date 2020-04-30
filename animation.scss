@@ -32,3 +32,17 @@ section {
       background-color: rgb(255, 7, 7);
    }
 }
+.bg5 {
+  background-color: rgb(65, 65, 65);
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+
+  }
+  .text {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}

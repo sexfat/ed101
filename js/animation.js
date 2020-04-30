@@ -85,7 +85,7 @@ animation();
 
 
 //動畫
-var tweenscroll = TweenMax.to('.box_scroll' , 1, {
+var tweenscroll = TweenMax.to('.box_scroll', 1, {
     x: 400
 });
 
@@ -103,12 +103,12 @@ new ScrollMagic.Scene({
 //第二個場景
 var tweenline = new TimelineMax();
 
-tweenline.to('.box_scroll01' ,1 ,{
+tweenline.to('.box_scroll01', 1, {
     x: 300
-}).to('.box_scroll01' , 1,{
-    y:400
-}).to('.box_scroll01' , 1 , {
-     x: 500
+}).to('.box_scroll01', 1, {
+    y: 400
+}).to('.box_scroll01', 1, {
+    x: 500
 })
 
 
@@ -120,13 +120,50 @@ new ScrollMagic.Scene({
     // triggerHook: .3,
     // duration: 400,
     reverse: true,
-}).setClassToggle('.bg4','on').setTween(tweenline).addIndicators({
+}).setClassToggle('.bg4', 'on').setTween(tweenline).addIndicators({
     name: 'keypoint02'
 }).addTo(controller);
 //.setClassToggle('.bg4','on') 選擇到.bg4 物件 然後動態加入on
 
 
+// 固定住場景
+var tlstick = new TimelineMax();
 
 
 
+//動畫執行
+tlstick.fromTo('.text1', 1, {
+    x: -100,
+    opacity: 0
+}, {
+    x: 0,
+    opacity: 1
+}).fromTo('.text2', 1 , {
+    x: -100,
+    opacity: 0
+},{
+    x: 0,
+    opacity: 1
+}).fromTo('.text3', 1 , {
+    x: -100,
+    opacity: 0
+},{
+    x: 0,
+    opacity: 1
+}).fromTo('.text4', 1 , {
+    y: -100,
+    opacity: 0
+},{
+    y: 0,
+    opacity: 1
+})
+//觸發事件
+new ScrollMagic.Scene({
+    triggerElement: '#keypoint3',
+    offset: 0,
+    triggerHook: 0,
+    duration: '400%',
 
+}).setPin('.bg5').setTween(tlstick).addIndicators({
+    name: 'keypoint03'
+}).addTo(controller);

@@ -31,4 +31,20 @@ section {
 .bg4.on {
   background-color: #ff0707;
 }
+
+.bg5 {
+  background-color: #414141;
+}
+
+.bg5 .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.bg5 .text {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
 /*# sourceMappingURL=animation.css.map */
