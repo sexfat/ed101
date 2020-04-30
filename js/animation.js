@@ -1,5 +1,5 @@
 console.log('start');
-
+//控制器
 var controller = new ScrollMagic.Controller();
 
 
@@ -84,16 +84,46 @@ animation();
 
 
 
-
+//動畫
 var tweenscroll = TweenMax.to('.box_scroll' , 1, {
     x: 400
 });
 
 
-
+//scoll 觸發事件
 new ScrollMagic.Scene({
-    triggerElement: '#keypoint1'
-}).setTween(tweenscroll).addIndicators().addTo(controller);
+    triggerElement: '#keypoint1',
+    offset: 100,
+    triggerHook: .2
+}).setTween(tweenscroll).addIndicators({
+    name: 'keypoint01'
+}).addTo(controller);
+
+
+//第二個場景
+var tweenline = new TimelineMax();
+
+tweenline.to('.box_scroll01' ,1 ,{
+    x: 300
+}).to('.box_scroll01' , 1,{
+    y:400
+}).to('.box_scroll01' , 1 , {
+     x: 500
+})
+
+
+
+//scoll 觸發事件
+new ScrollMagic.Scene({
+    triggerElement: '#keypoint2',
+    offset: 0,
+    // triggerHook: .3,
+    // duration: 400,
+    reverse: false,
+}).setTween(tweenline).addIndicators({
+    name: 'keypoint02'
+}).addTo(controller);
+
 
 
 
