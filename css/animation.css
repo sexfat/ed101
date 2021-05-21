@@ -33,13 +33,27 @@ section {
 }
 
 .bg5 {
-  background-color: #414141;
+  background-color: #f2f2f2;
 }
 
-.bg5 .wrapper {
-  width: 1200px;
+.bg5 .card {
+  top: 50px;
+  width: 300px;
+  height: 600px;
+  background-color: #d7d7d7;
   margin: 0 auto;
-  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.bg5 .card .boxs {
+  background-color: #0088ff;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 5%;
 }
 
 .bg5 .text {
