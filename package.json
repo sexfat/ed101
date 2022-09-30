@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap-sass": "^3.4.1",
-    "d3": "^5.15.1",
+    "d3": "^7.6.1",
     "fullpage": "^1.5.1",
     "gsap": "^2.1.2",
     "jquery": "^3.5.0",
